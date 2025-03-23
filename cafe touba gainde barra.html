@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GAINDE BARRA Café Touba ">
+    <title>GAINDE BARRA CAFE </title>
+
+    
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        
+        .hero {
+            background-image: url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: rgb(58, 38, 38);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+        }
+
+       
+        #produits {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #produits h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .produits-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+         
+        }
+
+        .produit-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .produit-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .produit-card h3 {
+            font-size: 1.8em;
+            margin-top: 20px;
+        }
+
+        .produit-card p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+      
+        #panier {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #panier h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .panier-container {
+            margin-top: 30px;
+        }
+
+        .panier-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .panier-item span {
+            font-size: 1.2em;
+        }
+
+        .panier-item button {
+            background-color: #e74c3c;
+            border-radius: 5px;
+        }
+
+        
+        #contact {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .profile {
+            margin-top: 20px;
+        }
+        .profile img {
+            width: 150px;
+            border-radius: 50%;
+            border: 3px solid #8B4513;
+        }
+        .profile p {
+            font-size: 18px;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            font-weight:bold;
+            text-align: center;
+        }
+        .instagram-btn {
+            background: #f57a33;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            font-weight: bold;
+            text-align: center;
+        }
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            font-size: 40px;
+            color: black;
+            transition: transform 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+   
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#panier">Panier</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="profile">
+       <center> <img src="gainde barra.jpg" alt="Photo du vendeur"></center>
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue chez GAINDE BARRA Café Touba</h1>
+            <p>Un goût authentique, une tradition sénégalaise
+                tradition du muridisme, L'art BAYE FALL
+                Au cœur des ter>res africaines, là où le soleil caresse les champs de café, naît un breuvage au caractère noble et envoûtant : le Café Touba . 
+
+                Issu d'une sélection rigoureuse des meilleurs grains, 
+                Dès qu'il frôle vos lèvres, il éveille les sens, réchauffe l'âme et insuffle une énergie nouvelle. Son parfum boisé, aux notes légèrement épicées, transporte instantanément
+             <center>  <b> Un café, une histoire, une émotion.<br></center>
+                
+                Laissez-vous séduire par cette expérience unique, où chaque tasse raconte une tradition,
+                
+             <br>   ☕ Savourez l'essence du Café Touba, et laissez la magie opérer. </b>✨
+               <br><br> <b> Contactez-nous</b> sur WhatsApp<a href="https://wa.me/221778401904">+221 77-840-19-04</a><br> sur TIKTOK
+               <a href="https://www.tiktok.com/@gaindebarra_?_t=ZM-8uvNjnm97BP&_r=1" class="tiktok-btn">@gaindebarra_ </a> <br>et 
+               sur instagram <a href="https://www.instagram.com/gaindebarra_?igsh=MTdsbXg0b3k1dmt1aQ%3D%3D&utm_source=qr">@gaindebarra_</a>
+            </p>
+        </div>
+        <video id="reelVideo" autoplay muted loop width="200">
+            <source src="video GBC.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    
+    <section id="produits">
+        <h2>Nos Produits</h2>
+        <div class="produits-container">
+            <div class="produit-card">
+                <img src="500g.jpg" alt="Café Touba 500g">
+                <h3>Café Touba 500g</h3>
+                <p>Un café 100% naturel et parfumé aux épices.</p>
+                <button onclick="ajouterPanier('Café Touba 500g')">Ajouter au panier</button>
+            </div>
+            <div class="produit-card">
+                <img src="250g.jpg" alt="Café Touba 250g">
+                <h3>Café Touba 250g</h3>
+                <p>Un café prêt à l'emploi, pour les amateurs de café rapide.</p>
+                <button onclick="ajouterPanier('Café Touba 250g')">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+    <div class="contact">
+        <p>Commandez maintenant via WhatsApp :</p>
+        <a href="https://wa.me/221778401904" class="whatsapp-btn">WhatsApp</a>
+        <p>Commandez maintenant via instagram :</p>
+        <a href="https://www.instagram.com/gaindebarra_?igsh=MTdsbXg0b3k1dmt1aQ%3D%3D&utm_source=qr" class="instagram-btn">instagram</a>
+    </div>
+
+
+    <section id="panier">
+        <h2>Mon Panier</h2>
+        <div class="panier-container" id="panier-container">
+            <p>Votre panier est vide.</p>
+        </div>
+        <button onclick="viderPanier()">Vider le panier</button>
+    </section>
+
+   
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form id="form-contact">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2025 GAINDE BARRA CAFE Touba | Tous droits réservés</p>
+    </footer>
+
+  
+    <script>
+        let panier = [];
+
+      
+        function ajouterPanier(produit) {
+            panier.push(produit);
+            afficherPanier();
+        }
+
+        
+        function afficherPanier() {
+            const panierContainer = document.getElementById('panier-container');
+            panierContainer.innerHTML = ''; 
+
+            if (panier.length === 0) {
+                panierContainer.innerHTML = '<p>Votre panier est vide.</p>';
+            } else {
+                panier.forEach((produit, index) => {
+                    const produitDiv = document.createElement('div');
+                    produitDiv.classList.add('panier-item');
+                    produitDiv.innerHTML = `
+                        <span>${produit}</span>
+                        <button onclick="supprimerProduit(${index})">Supprimer</button>
+                    `;
+                    panierContainer.appendChild(produitDiv);
+                });
+            }
+        }
+
+       
+        function supprimerProduit(index) {
+            panier.splice(index, 1);
+            afficherPanier();
+        }
+
+        
+        function viderPanier() {
+            panier = [];
+            afficherPanier();
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+        let video = document.getElementById("Video");
+        video.muted = true; // Activer le son
+
+        video.play().then(() => {
+            console.log("Lecture automatique avec le son activé.");
+        }).catch(error => {
+            console.log("Autoplay bloqué, ajout d'un bouton de lecture.");
+            
+            // Créer un bouton pour activer la lecture si l'autoplay est bloqué
+            let playButton = document.createElement("button");
+            playButton.textContent = "Cliquer pour lire la vidéo";
+            playButton.style.display ="block";
+            playButton.style.margin = "20px auto";
+            playButton.style.padding = "10px 20px";
+            playButton.style.fontSize = "16px";
+            playButton.style.cursor = "pointer";
+            
+            document.body.appendChild(playButton);
+            
+            playButton.addEventListener("click", function() {
+                video.play();
+                playButton.remove(); // Supprimer le bouton après lecture
+            });
+        });
+    });
+       
